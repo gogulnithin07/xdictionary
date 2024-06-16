@@ -16,9 +16,7 @@ const [out,setOut]=useState(null)
 function handleSublit(e){
 
     e.preventDefault()
-    if(text.length){
-        return;
-    }
+    
     let output=arr.find((val)=>val.word.toLowerCase().trim() === text.toLowerCase());
     output=output?.meaning;
 if(output){
