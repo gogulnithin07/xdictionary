@@ -14,20 +14,16 @@ function Dictionary(){
 const [text,setText]=useState("");
 const [out,setOut]=useState(null)
 function handleSublit(e){
-
     e.preventDefault()
-    
     let output=arr.find((val)=>val.word.toLowerCase().trim() === text.toLowerCase());
     output=output?.meaning;
 if(output){
     setOut(output);
-
 }
 else{
-    setOut("Word not found in the dictionary");
+    setOut("Word not found in the dictionary.");
     setText("")
 }
-
 }
 return <div>
     <h1>Dictionary App</h1>
